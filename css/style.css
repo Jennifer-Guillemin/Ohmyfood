@@ -5,8 +5,7 @@
 }
 
 .main-container {
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;
 }
 
 header {
@@ -14,6 +13,82 @@ header {
   justify-content: space-evenly;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.head {
+  background-color: #f6f6f6;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(234, 234, 234);
+  font-weight: 500;
+}
+
+.head-line {
+  text-align: center;
+  margin: 10px;
+}
+
+.button-explorez {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.button-explorez [type=submit] {
+  height: 50px;
+  width: 218px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  border: 0;
+  color: white;
+}
+
+/***** Fonctionnement *****/
+.fonctionnement {
+  display: grid;
+  padding-top: 30px;
+}
+.fonctionnement-title {
+  margin-left: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.fonctionnement-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  padding-bottom: 40px;
+  width: 85%;
+}
+.fonctionnement-cards .card {
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 0px, 4px, 15px, 0px #000000;
+  height: 72.38px;
+  width: 100%;
+  margin-top: 15px;
+}
+.fonctionnement-txt {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.numero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  border-radius: 20px;
+  background-color: #9356dc;
+  color: white;
 }
 
 .euro {
@@ -28,7 +103,6 @@ header {
   text-transform: uppercase;
   margin-left: 10px;
 }
-
 .menu-cards {
   width: 100%;
   position: relative;
@@ -95,7 +169,7 @@ h1 {
   padding-bottom: 40px;
 }
 
-.button-commander [type="submit"] {
+.button-commander [type=submit] {
   height: 50px;
   width: 186px;
   background: linear-gradient(#ff79da, #9356dc);
@@ -122,93 +196,17 @@ h1 {
   color: black;
 }
 
-.search {
-  display: flex;
-  justify-content: center;
-  background-color: rgb(234, 234, 234);
-}
-
-.head {
-  background-color: #f6f6f6;
-}
-
-.head-line {
-  text-align: center;
-}
-
-.button-explorez {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 30px;
-}
-
-.button-explorez [type="submit"] {
-  height: 50px;
-  width: 218px;
-  background: linear-gradient(#ff79da, #9356dc);
-  border-radius: 25px;
-  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
-  border: 0;
-  color: white;
-}
-
 li {
   display: flex;
   align-items: baseline;
 }
 
-.numero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 24px;
-  width: 24px;
-  border-radius: 20px;
-  background-color: #9356dc;
-  color: white;
-}
-
-.fonctionnement {
-  display: grid;
-  justify-content: center;
-  padding-top: 30px;
-}
-
-.fonctionnement-title {
-  font-size: 24px;
-  font-weight: 700;
-}
-
-.fonctionnement-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
-  padding-bottom: 40px;
-}
-
-.fonctionnement-cards .card {
-  background-color: #f6f6f6;
-  border-radius: 20px;
-  box-shadow: 0px, 4px, 15px, 0px #000000;
-  height: 72.38px;
-  width: 322.49px;
-  margin-top: 15px;
-}
-
-.fonctionnement-txt {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.fa-regular {
+.fa-heart {
   margin-right: 20px;
 }
 
-.fa-regular:active {
-  color: #9356dc;
+.fa-heart:active {
+  color: linear-gradient(#ff79da, #9356dc);
 }
 
 .card {
@@ -216,12 +214,10 @@ li {
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
-
 .card img {
   -o-object-fit: cover;
   object-fit: cover;
 }
-
 .card-title {
   font-size: 16px;
 }
@@ -248,8 +244,8 @@ footer img {
   padding-top: 30px;
   background-color: #f6f6f6;
   padding-bottom: 60px;
+  width: 100%;
 }
-
 .restaurants-title {
   font-size: 24px;
   margin-left: 15px;
@@ -296,7 +292,7 @@ footer img {
 }
 
 /********* media queries *******/
-@media (min-width: 430px) {
+@media (min-width: 700px) {
   .fonctionnement-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -322,4 +318,4 @@ footer img {
     display: flex;
     flex-direction: row-reverse;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
