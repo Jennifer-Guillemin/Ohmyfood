@@ -239,23 +239,6 @@ li {
   }
 }
 
-footer {
-  background-color: rgb(53, 53, 53);
-  color: white;
-  padding: 15px;
-
-  .fa-solid {
-    color: white;
-    margin-right: 15px;
-  }
-
-  img {
-    color: white;
-    height: 27px;
-    width: 137.58px;
-  }
-}
-
 /***** Restaurant ******/
 .restaurants {
   padding-top: 30px;
@@ -302,6 +285,25 @@ footer {
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+
+/*** Footer ***/
+
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 15px;
+
+  .fa-solid {
+    color: white;
+    margin-right: 15px;
+  }
+
+  img {
+    color: white;
+    height: 27px;
+    width: 137.58px;
   }
 }
 
