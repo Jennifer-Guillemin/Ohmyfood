@@ -11,7 +11,7 @@
 header {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 15px;
+  padding-top: 25px;
   padding-bottom: 15px;
 }
 
@@ -27,18 +27,21 @@ header {
 }
 
 .head-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 10px;
+  padding-bottom: 60px;
+
+  h2 {
+    margin-bottom: -10px;
+  }
 }
 
 .button-explorez {
   display: flex;
   justify-content: center;
-  padding-top: 15px;
-  padding-bottom: 30px;
-}
-
-.button-explorez [type="submit"] {
+  align-items: center;
   height: 50px;
   width: 218px;
   background: linear-gradient(#ff79da, #9356dc);
@@ -48,17 +51,20 @@ header {
   color: white;
 }
 
-.button-explorez[type="submit"]:hover {
+.button-explorez:hover {
+  background: linear-gradient(#ff79da 100%, #9356dc 100%, #ffffff 15%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
 /***** Fonctionnement *****/
 
 .fonctionnement {
   display: grid;
-  padding-top: 30px;
+  padding-top: 20px;
 
   &-title {
     margin-left: 15px;
+    margin-bottom: -30px;
     font-size: 24px;
     font-weight: 700;
   }
@@ -136,26 +142,26 @@ header {
 
 .all-card {
   padding-bottom: 20px;
-}
 
-.all-card .card {
-  margin-left: 8px;
-  margin-right: 8px;
-  height: 69px;
-}
+  .card {
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 69px;
+  }
 
-.all-card .card-title {
-  font-size: 18px;
-  padding-top: 15px;
-  margin-bottom: -10px;
-  margin-left: 15px;
-}
+  .card-title {
+    font-size: 18px;
+    padding-top: 15px;
+    margin-bottom: -10px;
+    margin-left: 15px;
+  }
 
-.all-card .card-subtitle {
-  display: flex;
-  justify-content: space-between;
-  font-size: 15px;
-  margin-left: 15px;
+  .card-subtitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-left: 15px;
+  }
 }
 
 .entete img {
@@ -237,17 +243,17 @@ footer {
   background-color: rgb(53, 53, 53);
   color: white;
   padding: 15px;
-}
 
-footer .fa-solid {
-  color: white;
-  margin-right: 15px;
-}
+  .fa-solid {
+    color: white;
+    margin-right: 15px;
+  }
 
-footer img {
-  color: white;
-  height: 27px;
-  width: 137.58px;
+  img {
+    color: white;
+    height: 27px;
+    width: 137.58px;
+  }
 }
 
 /***** Restaurant ******/
@@ -262,45 +268,41 @@ footer img {
     margin-left: 15px;
     margin-bottom: -10px;
   }
-}
 
-.restaurants-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  gap: 18px;
-}
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 18px;
 
-.restaurants-cards .card {
-  height: 251px;
-  width: 100%;
-}
-
-.restaurants-cards .img-food {
-  height: 175px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 5px;
-}
-
-.restaurants-cards .card-content {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  margin-left: 8px;
-}
-
-.restaurants-cards .card-title {
-  font-size: 18px;
-  margin: 8px;
-}
-
-.restaurants-cards .card-subtitle {
-  margin: 8px;
-  width: 330px;
-  display: flex;
-  justify-content: space-between;
+    .card {
+      height: 251px;
+      width: 100%;
+    }
+    .img-food {
+      height: 175px;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border: 5px;
+    }
+    .card-content {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      margin-left: 8px;
+    }
+    .card-title {
+      font-size: 18px;
+      margin: 8px;
+    }
+    .card-subtitle {
+      margin: 8px;
+      width: 330px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
 }
 
 /********* media queries *******/
@@ -315,15 +317,15 @@ footer img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-  }
 
-  .restaurants-cards .card {
-    height: 251px;
-    width: 490px;
-  }
+    .card {
+      height: 251px;
+      width: 490px;
+    }
 
-  .restaurants-cards .card-subtitle {
-    width: 460px;
+    .card-subtitle {
+      width: 460px;
+    }
   }
 
   footer div {
