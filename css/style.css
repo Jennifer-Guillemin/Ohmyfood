@@ -86,6 +86,7 @@ header {
   text-align: center;
   align-items: center;
   margin-top: 10px;
+  font-weight: 500;
 }
 
 .numero {
@@ -249,13 +250,6 @@ li {
   height: 251px;
   width: 100%;
 }
-.restaurants-cards .img-food {
-  height: 175px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 5px;
-}
 .restaurants-cards .card-content {
   display: flex;
   width: 100%;
@@ -271,6 +265,13 @@ li {
   width: 330px;
   display: flex;
   justify-content: space-between;
+}
+.restaurants-cards .img-food {
+  height: 175px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 5px;
 }
 
 /*** Footer ***/
@@ -291,29 +292,70 @@ footer img {
 
 /********* media queries *******/
 @media (min-width: 700px) {
+  .head-line {
+    padding-bottom: 30px;
+  }
+  .head-line h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .head-line p {
+    font-size: 18px;
+  }
+  .fonctionnement {
+    padding: 50px 180px 50px 180px;
+  }
   .fonctionnement-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+  }
+  .fonctionnement .card {
+    width: 335px;
+  }
+  .restaurants-title {
+    padding-left: 180px;
   }
   .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    row-gap: 50px;
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
   .restaurants-cards .card {
     height: 251px;
-    width: 490px;
   }
   .restaurants-cards .card-subtitle {
     width: 460px;
   }
   footer div {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     padding-top: 20px;
+  }
+  footer div img {
+    padding-left: 40px;
   }
   .footer-content {
     display: flex;
     flex-direction: row-reverse;
+  }
+  .entete img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 383px;
+  }
+  .menu-cards {
+    width: 1055px;
+    margin-left: 180px;
+  }
+  .menu-cards section {
+    padding-left: 250px;
+  }
+  .all-card .card {
+    width: 60%;
   }
 }/*# sourceMappingURL=style.css.map */

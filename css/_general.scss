@@ -91,6 +91,7 @@ header {
     text-align: center;
     align-items: center;
     margin-top: 10px;
+    font-weight: 500;
   }
 }
 
@@ -261,29 +262,31 @@ li {
     .card {
       height: 251px;
       width: 100%;
+
+      &-content {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        margin-left: 8px;
+      }
+      &-title {
+        font-size: 18px;
+        margin: 8px;
+      }
+      &-subtitle {
+        margin: 8px;
+        width: 330px;
+        display: flex;
+        justify-content: space-between;
+      }
     }
+
     .img-food {
       height: 175px;
       width: 100%;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
       border: 5px;
-    }
-    .card-content {
-      display: flex;
-      width: 100%;
-      flex-direction: row;
-      margin-left: 8px;
-    }
-    .card-title {
-      font-size: 18px;
-      margin: 8px;
-    }
-    .card-subtitle {
-      margin: 8px;
-      width: 330px;
-      display: flex;
-      justify-content: space-between;
     }
   }
 }
@@ -310,19 +313,45 @@ footer {
 /********* media queries *******/
 
 @media (min-width: 700px) {
-  .fonctionnement-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+  .head-line {
+    padding-bottom: 30px;
+    h2 {
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .fonctionnement {
+    padding: 50px 180px 50px 180px;
+
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 25px;
+    }
+
+    .card {
+      width: 335px;
+    }
+  }
+
+  .restaurants-title {
+    padding-left: 180px;
   }
 
   .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    row-gap: 50px;
+    column-gap: 100px;
+    padding-left: 180px;
+    padding-right: 180px;
 
     .card {
       height: 251px;
-      width: 490px;
     }
 
     .card-subtitle {
@@ -332,12 +361,36 @@ footer {
 
   footer div {
     display: flex;
-    gap: 10px;
+    gap: 20px;
     padding-top: 20px;
+
+    & img {
+      padding-left: 40px;
+    }
   }
 
   .footer-content {
     display: flex;
     flex-direction: row-reverse;
+  }
+
+  .entete img {
+    object-fit: cover;
+    height: 383px;
+  }
+
+  .menu-cards {
+    width: 1055px;
+    margin-left: 180px;
+
+    section {
+      padding-left: 250px;
+    }
+  }
+
+  .all-card {
+    .card {
+      width: 60%;
+    }
   }
 }
