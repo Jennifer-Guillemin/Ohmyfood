@@ -52,7 +52,7 @@ header {
 }
 
 .button-explorez:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100%, #ffffff 15%);
+  background: linear-gradient(#ff79da 100%, #9356dc 100%, white/15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
@@ -63,7 +63,7 @@ header {
   padding-top: 20px;
 
   &-title {
-    margin-left: 15px;
+    margin-left: 5%;
     margin-bottom: -30px;
     font-size: 24px;
     font-weight: 700;
@@ -75,6 +75,7 @@ header {
     gap: 15px;
     padding-bottom: 40px;
     width: 85%;
+    margin-left: -5%;
 
     .card {
       background-color: #f6f6f6;
@@ -181,18 +182,18 @@ h1 {
 .button-commander {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
-  padding-bottom: 40px;
-}
-
-.button-commander [type="submit"] {
+  align-items: center;
   height: 50px;
-  width: 186px;
+  width: 218px;
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
   border: 0;
   color: white;
+}
+
+.button-commander:hover {
+  background: linear-gradient(#ff79da, #9356dc);
 }
 
 .fa-solid {
@@ -240,23 +241,35 @@ li {
   }
 }
 
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80px;
+  height: 29px;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 3px;
+  position: absolute;
+  right: 3%;
+}
+
 /***** Restaurant ******/
 .restaurants {
-  padding-top: 30px;
   background-color: #f6f6f6;
+  padding: 5%;
   padding-bottom: 60px;
-  width: 100%;
 
   &-title {
     font-size: 24px;
-    margin-left: 15px;
     margin-bottom: -10px;
   }
 
   &-cards {
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
     gap: 18px;
 
     .card {
@@ -265,17 +278,19 @@ li {
 
       &-content {
         display: flex;
-        width: 100%;
         flex-direction: row;
         margin-left: 8px;
       }
+      &-txt {
+        width: 100%;
+      }
+
       &-title {
         font-size: 18px;
         margin: 8px;
       }
       &-subtitle {
         margin: 8px;
-        width: 330px;
         display: flex;
         justify-content: space-between;
       }
@@ -312,7 +327,7 @@ footer {
 
 /********* media queries *******/
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   .head-line {
     padding-bottom: 30px;
     h2 {
@@ -325,37 +340,33 @@ footer {
   }
 
   .fonctionnement {
-    padding: 50px 180px 50px 180px;
+    &-title {
+      padding-left: 12%;
+    }
 
     &-cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
+      padding-left: 12%;
     }
 
     .card {
-      width: 335px;
+      width: 80%;
     }
   }
 
   .restaurants-title {
-    padding-left: 180px;
+    padding-left: 12%;
   }
 
   .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 50px;
-    column-gap: 100px;
-    padding-left: 180px;
-    padding-right: 180px;
 
     .card {
       height: 251px;
-    }
-
-    .card-subtitle {
-      width: 460px;
     }
   }
 
