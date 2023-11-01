@@ -10,7 +10,7 @@
 
 header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-top: 25px;
   padding-bottom: 15px;
 }
@@ -52,7 +52,7 @@ header {
 }
 
 .button-explorez:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100%, white/15%);
+  background: linear-gradient(#ff79da 100%, #9356dc 100%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
@@ -130,18 +130,6 @@ header {
   }
 }
 
-.button-check {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 70px;
-  width: 59px;
-  background-color: #99e2d0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border: 0;
-}
-
 .all-card {
   padding-bottom: 20px;
 
@@ -179,12 +167,19 @@ h1 {
   font-size: 28px;
 }
 
+.bouton-du-bas {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
 .button-commander {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 50px;
-  width: 218px;
+  width: 186px;
   background: linear-gradient(#ff79da, #9356dc);
   border-radius: 25px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
@@ -193,7 +188,8 @@ h1 {
 }
 
 .button-commander:hover {
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#ff79da 100%, #9356dc 100%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
 .fa-solid {
@@ -325,7 +321,7 @@ footer {
   }
 }
 
-/********* media queries *******/
+/********* media queries *********/
 
 @media (min-width: 768px) {
   .head-line {
@@ -341,14 +337,14 @@ footer {
 
   .fonctionnement {
     &-title {
-      padding-left: 12%;
+      margin-left: 12%;
     }
 
     &-cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
-      padding-left: 12%;
+      margin-left: 10%;
     }
 
     .card {
@@ -357,16 +353,20 @@ footer {
   }
 
   .restaurants-title {
-    padding-left: 12%;
+    padding-left: 8%;
+    padding-bottom: 3%;
   }
 
   .restaurants-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 50px;
+    row-gap: 10%;
+    align-content: center;
 
     .card {
       height: 251px;
+      width: 75%;
+      margin-left: 15%;
     }
   }
 
@@ -390,18 +390,58 @@ footer {
     height: 383px;
   }
 
+  .card:hover {
+  }
+
+  .button-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 59px;
+    background-color: #99e2d0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 0;
+    margin-left: 96%;
+  }
+
+  .button-check:hover {
+    display: flex;
+    animation: check 1s forwards 100ms;
+
+    .euro {
+      animation: euro 1s forwards;
+    }
+  }
+
+  @keyframes check {
+    60% {
+      translate: -40px;
+    }
+  }
+
+  @keyframes euro {
+  }
+
   .menu-cards {
-    width: 1055px;
-    margin-left: 180px;
+    width: 78%;
+    margin-left: 11%;
 
     section {
-      padding-left: 250px;
+      padding-left: 18%;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      gap: 2%;
     }
   }
 
   .all-card {
     .card {
-      width: 60%;
+      width: 78%;
     }
   }
 }
