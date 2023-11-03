@@ -6,14 +6,15 @@
 
 .Chargement {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #9356dc;
 
   h2 {
-    font-family: "Shriklhand";
-    font-size: 60px;
+    color: #000000;
+    font-size: 20px;
     display: flex;
 
     span {
@@ -23,7 +24,7 @@
 }
 
 @keyframes animate {
-  0% {
+  15% {
     color: white;
   }
 }
@@ -424,7 +425,7 @@ footer {
   .card:hover {
     .card-subtitle,
     .button-check {
-      animation: check 1s forwards 500ms;
+      animation: check 500ms forwards;
     }
   }
 
@@ -439,6 +440,9 @@ footer {
     border-bottom-right-radius: 20px;
     border: 0;
     margin-right: -60px;
+    .fa-solid {
+      color: white;
+    }
   }
 
   .button-check:hover {
@@ -451,16 +455,19 @@ footer {
 
   @keyframes check {
     from {
-      margin-right: 0px;
+      margin-right: -40px;
     }
     to {
-      margin-right: 50px;
+      margin-right: 0px;
     }
   }
 
   @keyframes euro {
-    60% {
-      translate: -60px;
+    from {
+      margin-right: -40px;
+    }
+    to {
+      margin-right: 0px;
     }
   }
 
