@@ -5,12 +5,18 @@
 }
 
 .Chargement {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   min-height: 100vh;
   background-color: #9356dc;
+  animation: loader 5s forwards;
 
   h2 {
     color: #000000;
@@ -18,8 +24,23 @@
     display: flex;
 
     span {
-      animation: animate 5s linear infinite;
+      animation: animate 3s linear infinite;
     }
+  }
+}
+
+@keyframes loader {
+  90% {
+    opacity: 1;
+    z-index: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
   }
 }
 
@@ -77,8 +98,8 @@ header {
 }
 
 .button-explorez:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100%);
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
+  background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
 }
 
 /***** Fonctionnement *****/
@@ -176,6 +197,11 @@ header {
     font-size: 15px;
     margin-left: 15px;
   }
+}
+
+.card-subtitle .euro {
+  display: flex;
+  justify-content: space-around;
 }
 
 .entete img {
@@ -384,21 +410,26 @@ footer {
     }
   }
 
-  .restaurants-title {
-    padding-left: 8%;
-    padding-bottom: 3%;
-  }
+  .restaurants {
+    padding: 1%;
+    padding-bottom: 60px;
 
-  .restaurants-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10%;
-    align-content: center;
+    &-title {
+      padding-left: 8%;
+      padding-bottom: 3%;
+    }
 
-    .card-resto {
-      height: 251px;
-      width: 75%;
-      margin-left: 15%;
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10%;
+      align-content: center;
+
+      .card-resto {
+        height: 251px;
+        width: 75%;
+        margin-left: 15%;
+      }
     }
   }
 
@@ -493,8 +524,8 @@ footer {
 
     .card {
       display: flex;
-      flex-direction: row;
       justify-content: space-between;
+      align-items: center;
       overflow: hidden;
       width: 78%;
     }

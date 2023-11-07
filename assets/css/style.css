@@ -5,12 +5,18 @@
 }
 
 .Chargement {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
   min-height: 100vh;
   background-color: #9356dc;
+  animation: loader 5s forwards;
 }
 .Chargement h2 {
   color: #000000;
@@ -18,9 +24,22 @@
   display: flex;
 }
 .Chargement h2 span {
-  animation: animate 5s linear infinite;
+  animation: animate 3s linear infinite;
 }
 
+@keyframes loader {
+  90% {
+    opacity: 1;
+    z-index: 1;
+  }
+  99% {
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 @keyframes animate {
   15% {
     color: white;
@@ -73,7 +92,7 @@ header {
 }
 
 .button-explorez:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100%);
+  background: linear-gradient(#ff79da 100%, #9356dc 100%/#ffffff 15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
@@ -163,6 +182,11 @@ header {
   justify-content: space-between;
   font-size: 15px;
   margin-left: 15px;
+}
+
+.card-subtitle .euro {
+  display: flex;
+  justify-content: space-around;
 }
 
 .entete img {
@@ -353,6 +377,10 @@ footer img {
   .fonctionnement .card {
     width: 80%;
   }
+  .restaurants {
+    padding: 1%;
+    padding-bottom: 60px;
+  }
   .restaurants-title {
     padding-left: 8%;
     padding-bottom: 3%;
@@ -445,8 +473,8 @@ footer img {
   }
   .all-card .card {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     overflow: hidden;
     width: 78%;
   }
