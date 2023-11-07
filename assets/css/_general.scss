@@ -4,6 +4,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.main-container {
+  margin: 0;
+}
+
 .Chargement {
   z-index: 1;
   position: fixed;
@@ -48,10 +52,6 @@
   15% {
     color: white;
   }
-}
-
-.main-container {
-  margin: 0;
 }
 
 header {
@@ -102,8 +102,7 @@ header {
   filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
 }
 
-/***** Fonctionnement *****/
-
+/********* Fonctionnement *********/
 .fonctionnement {
   display: grid;
   padding-top: 20px;
@@ -142,6 +141,23 @@ header {
   }
 }
 
+li {
+  display: flex;
+  align-items: baseline;
+}
+
+.fa-solid {
+  color: rgb(53, 53, 53);
+  width: 12px;
+  height: 16px;
+  border: 1px;
+  margin-right: 20px;
+}
+
+.fa-store {
+  color: #9356dc;
+}
+
 .numero {
   display: flex;
   justify-content: center;
@@ -153,9 +169,10 @@ header {
   color: white;
 }
 
-.euro {
-  font-weight: 700;
-  margin-right: 15px;
+/*********** Les menus ***********/
+.entete img {
+  width: 100%;
+  height: 275px;
 }
 
 .menu {
@@ -176,45 +193,89 @@ header {
   }
 }
 
-.all-card {
-  padding-bottom: 20px;
-
-  .card {
-    margin-left: 8px;
-    margin-right: 8px;
-    height: 69px;
-  }
-
-  .card-title {
-    font-size: 18px;
-    margin-bottom: -10px;
-    margin-left: 15px;
-  }
-
-  .card-subtitle {
-    display: flex;
-    justify-content: space-between;
-    font-size: 15px;
-    margin-left: 15px;
-  }
-}
-
-.card-subtitle .euro {
-  display: flex;
-  justify-content: space-around;
-}
-
-.entete img {
-  width: 100%;
-  height: 275px;
-}
-
 h1 {
   display: flex;
   justify-content: space-around;
   font-family: "shrikhand";
   font-weight: 400;
   font-size: 28px;
+}
+
+.all-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 69px;
+    &-txt {
+      width: 100%;
+    }
+
+    &-title {
+      font-size: 18px;
+      margin-bottom: -10px;
+      margin-left: 15px;
+    }
+
+    &-subtitle {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+.card-subtitle .euro {
+  display: flex;
+  justify-content: space-around;
+}
+
+.euro {
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.button-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 59px;
+  background-color: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 0;
+  margin-right: -60px;
+  .fa-solid {
+    color: white;
+  }
+}
+
+.card:hover {
+  .button-check {
+    animation: check 500ms forwards;
+  }
+}
+
+.button-check:hover {
+  display: flex;
+}
+
+@keyframes check {
+  from {
+    margin-right: -40px;
+  }
+  to {
+    margin-right: 0px;
+  }
 }
 
 .bouton-du-bas {
@@ -242,26 +303,9 @@ h1 {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
 }
 
-.fa-solid {
-  color: rgb(53, 53, 53);
-  width: 12px;
-  height: 16px;
-  border: 1px;
-  margin-right: 20px;
-}
-
-.fa-store {
-  color: #9356dc;
-}
-
 .no-style {
   text-decoration: none;
   color: black;
-}
-
-li {
-  display: flex;
-  align-items: baseline;
 }
 
 .fa-regular,
@@ -280,37 +324,7 @@ li {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-.card-resto {
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-
-  img {
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
-
-  &-title {
-    font-size: 16px;
-  }
-}
-
-.new {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
-  width: 80px;
-  height: 29px;
-  background-color: #99e2d0;
-  color: #008766;
-  border-radius: 3px;
-  position: absolute;
-  right: 3%;
-}
-
-/***** Restaurant ******/
+/*********** Restaurants *********/
 .restaurants {
   background-color: #f6f6f6;
   padding: 5%;
@@ -360,7 +374,37 @@ li {
   }
 }
 
-/*** Footer ***/
+.card-resto {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+  img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+}
+
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80px;
+  height: 29px;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 3px;
+  position: absolute;
+  right: 3%;
+}
+
+/********** Footer *********/
 
 footer {
   background-color: rgb(53, 53, 53);
@@ -393,16 +437,17 @@ footer {
     }
   }
 
+  /******* Fonctionnement ******/
   .fonctionnement {
     &-title {
-      margin-left: 12%;
+      margin-left: 9%;
     }
 
     &-cards {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
-      margin-left: 10%;
+      margin-left: 6%;
     }
 
     .card {
@@ -410,6 +455,7 @@ footer {
     }
   }
 
+  /******* Restaurants *******/
   .restaurants {
     padding: 1%;
     padding-bottom: 60px;
@@ -433,6 +479,7 @@ footer {
     }
   }
 
+  /******* Footer *******/
   footer div {
     display: flex;
     gap: 20px;
@@ -448,52 +495,24 @@ footer {
     flex-direction: row-reverse;
   }
 
+  /******* Les menus ******/
+
   .entete img {
     object-fit: cover;
     height: 383px;
   }
 
   .card:hover {
-    .card-subtitle,
     .button-check {
       animation: check 500ms forwards;
     }
   }
 
-  .button-check {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70px;
-    width: 59px;
-    background-color: #99e2d0;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border: 0;
-    margin-right: -60px;
-    .fa-solid {
-      color: white;
-    }
-  }
-
   .button-check:hover {
     display: flex;
-
-    .euro {
-      animation: euro 1s forwards;
-    }
   }
 
   @keyframes check {
-    from {
-      margin-right: -40px;
-    }
-    to {
-      margin-right: 0px;
-    }
-  }
-
-  @keyframes euro {
     from {
       margin-right: -40px;
     }
@@ -508,26 +527,14 @@ footer {
 
     section {
       padding-left: 18%;
+      padding-right: 18%;
     }
 
     h1 {
       display: flex;
       justify-content: center;
+      padding-top: 15px;
       gap: 2%;
-    }
-  }
-
-  .all-card {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    .card {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      overflow: hidden;
-      width: 78%;
     }
   }
 }
