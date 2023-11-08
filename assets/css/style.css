@@ -159,6 +159,95 @@ li {
   color: white;
 }
 
+/*********** Restaurants *********/
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 5%;
+  padding-bottom: 60px;
+}
+.restaurants-title {
+  font-size: 24px;
+  margin-bottom: -10px;
+}
+.restaurants-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+.restaurants-cards .card-resto {
+  height: 251px;
+  width: 100%;
+}
+.restaurants-cards .card-resto-content {
+  display: flex;
+  flex-direction: row;
+  margin-left: 8px;
+}
+.restaurants-cards .card-resto-txt {
+  width: 100%;
+}
+.restaurants-cards .card-resto-title {
+  font-size: 18px;
+  margin: 8px;
+}
+.restaurants-cards .card-resto-subtitle {
+  margin: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.restaurants-cards .img-food {
+  height: 175px;
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: 5px;
+}
+
+.card-resto {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+.card-resto img {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.card-resto-title {
+  font-size: 16px;
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+label i {
+  font-size: 21px;
+  border: -1px;
+}
+
+label input i::before {
+  color: #000000;
+}
+
+label input i::after {
+  color: #9356dc, #ff79da;
+}
+
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80px;
+  height: 29px;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 3px;
+  position: absolute;
+  right: 3%;
+}
+
 /*********** Les menus ***********/
 .entete img {
   width: 100%;
@@ -297,87 +386,10 @@ h1 {
   margin-right: 20px;
 }
 
-.fa-regular,
-.fa-heart :active {
-  color: linear-gradient(#ff79da, #9356dc);
-}
-
 .card {
   background-color: white;
   border-radius: 20px;
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-/*********** Restaurants *********/
-.restaurants {
-  background-color: #f6f6f6;
-  padding: 5%;
-  padding-bottom: 60px;
-}
-.restaurants-title {
-  font-size: 24px;
-  margin-bottom: -10px;
-}
-.restaurants-cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 18px;
-}
-.restaurants-cards .card-resto {
-  height: 251px;
-  width: 100%;
-}
-.restaurants-cards .card-resto-content {
-  display: flex;
-  flex-direction: row;
-  margin-left: 8px;
-}
-.restaurants-cards .card-resto-txt {
-  width: 100%;
-}
-.restaurants-cards .card-resto-title {
-  font-size: 18px;
-  margin: 8px;
-}
-.restaurants-cards .card-resto-subtitle {
-  margin: 8px;
-  display: flex;
-  justify-content: space-between;
-}
-.restaurants-cards .img-food {
-  height: 175px;
-  width: 100%;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border: 5px;
-}
-
-.card-resto {
-  background-color: white;
-  border-radius: 20px;
-  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-.card-resto img {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-.card-resto-title {
-  font-size: 16px;
-}
-
-.new {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  font-weight: 500;
-  width: 80px;
-  height: 29px;
-  background-color: #99e2d0;
-  color: #008766;
-  border-radius: 3px;
-  position: absolute;
-  right: 3%;
 }
 
 /********** Footer *********/
@@ -441,19 +453,6 @@ footer img {
     width: 75%;
     margin-left: 15%;
   }
-  /******* Footer *******/
-  footer div {
-    display: flex;
-    gap: 20px;
-    padding-top: 20px;
-  }
-  footer div img {
-    padding-left: 40px;
-  }
-  .footer-content {
-    display: flex;
-    flex-direction: row-reverse;
-  }
   /******* Les menus ******/
   .entete img {
     -o-object-fit: cover;
@@ -487,5 +486,18 @@ footer img {
     justify-content: center;
     padding-top: 15px;
     gap: 2%;
+  }
+  /******* Footer *******/
+  footer div {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  footer div img {
+    padding-left: 40px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
   }
 }/*# sourceMappingURL=style.css.map */
