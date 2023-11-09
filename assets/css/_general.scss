@@ -20,7 +20,7 @@
   width: 100%;
   min-height: 100vh;
   background-color: #9356dc;
-  animation: loader 5s forwards;
+  animation: loader 3s forwards;
 
   h2 {
     color: #000000;
@@ -56,9 +56,14 @@
 
 header {
   display: flex;
-  justify-content: center;
   padding-top: 25px;
   padding-bottom: 15px;
+  a {
+    margin-left: 15px;
+  }
+  div {
+    margin: auto;
+  }
 }
 
 .head {
@@ -100,6 +105,7 @@ header {
 .button-explorez:hover {
   background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
+  opacity: 0.8;
 }
 
 /********* Fonctionnement *********/
@@ -238,19 +244,6 @@ input {
   -webkit-appearance: none;
 }
 
-label i {
-  font-size: 21px;
-  border: -1px;
-}
-
-label input i::before {
-  color: #000000;
-}
-
-label input i::after {
-  color: (#9356dc, #ff79da);
-}
-
 .new {
   display: flex;
   align-items: center;
@@ -345,6 +338,9 @@ h1 {
       font-size: 18px;
       margin-bottom: -10px;
       margin-left: 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     &-subtitle {
@@ -352,6 +348,9 @@ h1 {
       justify-content: space-between;
       font-size: 15px;
       margin-left: 15px;
+      text-overflow: ellipsis;
+
+      overflow: hidden;
     }
   }
 }
@@ -421,8 +420,9 @@ h1 {
 }
 
 .button-commander:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100%);
-  filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
+  background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
+  opacity: 0.8;
 }
 
 .no-style {
@@ -447,7 +447,9 @@ footer {
   background-color: rgb(53, 53, 53);
   color: white;
   padding: 15px;
-
+  p {
+    color: #ffffff;
+  }
   .fa-solid {
     color: white;
     margin-right: 15px;
