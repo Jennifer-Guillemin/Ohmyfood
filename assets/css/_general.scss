@@ -160,7 +160,15 @@ li {
   margin-right: 20px;
 }
 
-.fa-store {
+.fa-mobile-screen-button:hover {
+  color: #9356dc;
+}
+
+.fa-list-ul:hover {
+  color: #9356dc;
+}
+
+.fa-store:hover {
   color: #9356dc;
 }
 
@@ -242,6 +250,17 @@ li {
 
 input {
   -webkit-appearance: none;
+}
+
+label {
+  .fa-solid {
+    position: absolute;
+  }
+}
+
+label:active:before {
+  .fa-solid {
+  }
 }
 
 .new {
@@ -334,13 +353,21 @@ h1 {
       width: 100%;
     }
 
+    &-txt {
+      width: 100%;
+      overflow: hidden;
+      h3,
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
     &-title {
       font-size: 18px;
       margin-bottom: -10px;
       margin-left: 15px;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
     }
 
     &-subtitle {
@@ -348,15 +375,14 @@ h1 {
       justify-content: space-between;
       font-size: 15px;
       margin-left: 15px;
-      text-overflow: ellipsis;
-
-      overflow: hidden;
     }
   }
 }
+
 .card-subtitle .euro {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .euro {

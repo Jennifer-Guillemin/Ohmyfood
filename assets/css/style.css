@@ -150,7 +150,15 @@ li {
   margin-right: 20px;
 }
 
-.fa-store {
+.fa-mobile-screen-button:hover {
+  color: #9356dc;
+}
+
+.fa-list-ul:hover {
+  color: #9356dc;
+}
+
+.fa-store:hover {
   color: #9356dc;
 }
 
@@ -224,6 +232,10 @@ li {
 
 input {
   -webkit-appearance: none;
+}
+
+label .fa-solid {
+  position: absolute;
 }
 
 .new {
@@ -314,26 +326,32 @@ h1 {
 .all-card .card-txt {
   width: 100%;
 }
+.all-card .card-txt {
+  width: 100%;
+  overflow: hidden;
+}
+.all-card .card-txt h3,
+.all-card .card-txt p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .all-card .card-title {
   font-size: 18px;
   margin-bottom: -10px;
   margin-left: 15px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 .all-card .card-subtitle {
   display: flex;
   justify-content: space-between;
   font-size: 15px;
   margin-left: 15px;
-  text-overflow: ellipsis;
-  overflow: hidden;
 }
 
 .card-subtitle .euro {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .euro {
