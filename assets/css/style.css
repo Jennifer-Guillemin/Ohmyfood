@@ -71,6 +71,9 @@ header div {
   background-color: rgb(234, 234, 234);
   font-weight: 500;
 }
+.search .fa-solid {
+  margin-right: 15px;
+}
 
 .head-line {
   display: flex;
@@ -100,6 +103,11 @@ header div {
   background: linear-gradient(#ff79da 100%, #9356dc 100%/#ffffff 15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.35));
   opacity: 0.8;
+}
+
+.no-style {
+  text-decoration: none;
+  color: black;
 }
 
 /********* Fonctionnement *********/
@@ -136,6 +144,9 @@ header div {
   margin-top: 10px;
   font-weight: 500;
 }
+.fonctionnement-txt .fa-solid {
+  margin-right: 10px;
+}
 
 li {
   display: flex;
@@ -147,7 +158,6 @@ li {
   width: 12px;
   height: 16px;
   border: 1px;
-  margin-right: 20px;
 }
 
 .fa-mobile-screen-button:hover {
@@ -173,6 +183,64 @@ li {
   color: white;
 }
 
+/********** Footer *********/
+footer {
+  background-color: rgb(53, 53, 53);
+  color: white;
+  padding: 15px;
+}
+footer p {
+  color: #ffffff;
+}
+footer .fa-solid {
+  color: white;
+  margin-right: 15px;
+}
+footer img {
+  color: white;
+  height: 27px;
+  width: 137.58px;
+}
+
+/********* media queries *********/
+@media (min-width: 768px) {
+  .head-line {
+    padding-bottom: 30px;
+  }
+  .head-line h2 {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .head-line p {
+    font-size: 18px;
+  }
+  /******* Fonctionnement ******/
+  .fonctionnement-title {
+    margin-left: 9%;
+  }
+  .fonctionnement-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-left: 6%;
+  }
+  .fonctionnement .card {
+    width: 80%;
+  }
+  /******* Footer *******/
+  footer div {
+    display: flex;
+    gap: 20px;
+    padding-top: 20px;
+  }
+  footer div img {
+    padding-left: 40px;
+  }
+  .footer-content {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
 /*********** Restaurants *********/
 .restaurants {
   background-color: #f6f6f6;
@@ -235,7 +303,16 @@ input {
 }
 
 label .fa-solid {
+  display: none;
   position: absolute;
+}
+
+label:hover .fa-solid {
+  display: block;
+  opacity: 1;
+  background-image: linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .new {
@@ -251,6 +328,28 @@ label .fa-solid {
   border-radius: 3px;
   position: absolute;
   right: 3%;
+}
+
+/********* media queries *********/
+/******* Restaurants *******/
+.restaurants {
+  padding: 1%;
+  padding-bottom: 60px;
+}
+.restaurants-title {
+  padding-left: 8%;
+  padding-bottom: 3%;
+}
+.restaurants-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10%;
+  align-content: center;
+  margin-left: 10%;
+}
+.restaurants-cards .card-resto {
+  height: 251px;
+  width: 75%;
 }
 
 /*********** Les menus ***********/
@@ -306,6 +405,10 @@ h1 {
   font-family: "shrikhand";
   font-weight: 400;
   font-size: 28px;
+}
+h1 .fa-solid,
+h1 .fa-regular {
+  margin-right: unset;
 }
 
 .all-card {
@@ -417,11 +520,6 @@ h1 {
   opacity: 0.8;
 }
 
-.no-style {
-  text-decoration: none;
-  color: black;
-}
-
 .fa-regular,
 .fa-heart {
   margin-right: 20px;
@@ -433,115 +531,41 @@ h1 {
   filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
-/********** Footer *********/
-footer {
-  background-color: rgb(53, 53, 53);
-  color: white;
-  padding: 15px;
-}
-footer p {
-  color: #ffffff;
-}
-footer .fa-solid {
-  color: white;
-  margin-right: 15px;
-}
-footer img {
-  color: white;
-  height: 27px;
-  width: 137.58px;
+/********* media queries *********/
+/******* Les menus ******/
+.entete img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 383px;
 }
 
-/********* media queries *********/
-@media (min-width: 768px) {
-  .head-line {
-    padding-bottom: 30px;
+.card:hover .button-check {
+  animation: check 500ms forwards;
+}
+
+.button-check:hover {
+  display: flex;
+}
+
+@keyframes check {
+  from {
+    margin-right: -40px;
   }
-  .head-line h2 {
-    font-size: 40px;
-    margin-bottom: 5px;
+  to {
+    margin-right: 0px;
   }
-  .head-line p {
-    font-size: 18px;
-  }
-  /******* Fonctionnement ******/
-  .fonctionnement-title {
-    margin-left: 9%;
-  }
-  .fonctionnement-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px;
-    margin-left: 6%;
-  }
-  .fonctionnement .card {
-    width: 80%;
-  }
-  /******* Restaurants *******/
-  .restaurants {
-    padding: 1%;
-    padding-bottom: 60px;
-  }
-  .restaurants-title {
-    padding-left: 8%;
-    padding-bottom: 3%;
-  }
-  .restaurants-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10%;
-    align-content: center;
-  }
-  .restaurants-cards .card-resto {
-    height: 251px;
-    width: 75%;
-    margin-left: 15%;
-  }
-  /******* Les menus ******/
-  .entete img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 383px;
-  }
-  .card:hover .button-check {
-    animation: check 500ms forwards;
-  }
-  .button-check:hover {
-    display: flex;
-  }
-  @keyframes check {
-    from {
-      margin-right: -40px;
-    }
-    to {
-      margin-right: 0px;
-    }
-  }
-  .menu-cards {
-    width: 78%;
-    margin-left: 11%;
-  }
-  .menu-cards section {
-    padding-left: 18%;
-    padding-right: 18%;
-  }
-  .menu-cards h1 {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    gap: 2%;
-  }
-  /******* Footer *******/
-  footer div {
-    display: flex;
-    gap: 20px;
-    padding-top: 20px;
-  }
-  footer div img {
-    padding-left: 40px;
-  }
-  .footer-content {
-    display: flex;
-    flex-direction: row-reverse;
-  }
+}
+.menu-cards {
+  width: 78%;
+  margin-left: 11%;
+}
+.menu-cards section {
+  padding-left: 18%;
+  padding-right: 18%;
+}
+.menu-cards h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 2%;
 }/*# sourceMappingURL=style.css.map */

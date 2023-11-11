@@ -1,0 +1,232 @@
+/*********** Les menus ***********/
+.entete img {
+  width: 100%;
+  height: 275px;
+}
+
+.menu {
+  border-bottom: solid 3px #99e2d0;
+  width: 40px;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  margin-left: 10px;
+
+  &-cards {
+    width: 100%;
+    position: relative;
+    background-color: #f6f6f6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -40px;
+    padding-top: 8px;
+  }
+}
+
+.section1 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 0.6s 1s ease-out forwards;
+}
+
+.section2 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 1.8s 1s ease-out forwards;
+}
+
+.section3 {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: apparition 2.8s 1s ease-out forwards;
+}
+
+@keyframes apparition {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+h1 {
+  display: flex;
+  justify-content: space-around;
+  font-family: "shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+  .fa-solid,
+  .fa-regular {
+    margin-right: unset;
+  }
+}
+
+.all-card {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 20px;
+
+  .card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 8px;
+    margin-right: 8px;
+    height: 69px;
+    &-txt {
+      width: 100%;
+    }
+
+    &-txt {
+      width: 100%;
+      overflow: hidden;
+      h3,
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &-title {
+      font-size: 18px;
+      margin-bottom: -10px;
+      margin-left: 15px;
+    }
+
+    &-subtitle {
+      display: flex;
+      justify-content: space-between;
+      font-size: 15px;
+      margin-left: 15px;
+    }
+  }
+}
+
+.card-subtitle .euro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.euro {
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.button-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  width: 59px;
+  background-color: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 0;
+  margin-right: -60px;
+  .fa-solid {
+    color: white;
+  }
+}
+
+.card:hover {
+  .button-check {
+    animation: check 500ms forwards;
+  }
+}
+
+.button-check:hover {
+  display: flex;
+}
+
+@keyframes check {
+  from {
+    margin-right: -40px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+
+.bouton-du-bas {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+.button-commander {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 186px;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 25px;
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+  border: 0;
+  color: white;
+}
+
+.button-commander:hover {
+  background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
+  filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
+  opacity: 0.8;
+}
+
+.fa-regular,
+.fa-heart {
+  margin-right: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+/********* media queries *********/
+
+/******* Les menus ******/
+
+.entete img {
+  object-fit: cover;
+  height: 383px;
+}
+
+.card:hover {
+  .button-check {
+    animation: check 500ms forwards;
+  }
+}
+
+.button-check:hover {
+  display: flex;
+}
+
+@keyframes check {
+  from {
+    margin-right: -40px;
+  }
+  to {
+    margin-right: 0px;
+  }
+}
+
+.menu-cards {
+  width: 78%;
+  margin-left: 11%;
+
+  section {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+
+  h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    gap: 2%;
+  }
+}

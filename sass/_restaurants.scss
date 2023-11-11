@@ -1,0 +1,124 @@
+/*********** Restaurants *********/
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 5%;
+  padding-bottom: 60px;
+
+  &-title {
+    font-size: 24px;
+    margin-bottom: -10px;
+  }
+
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    .card-resto {
+      height: 251px;
+      width: 100%;
+
+      &-content {
+        display: flex;
+        flex-direction: row;
+        margin-left: 8px;
+      }
+      &-txt {
+        width: 100%;
+      }
+
+      &-title {
+        font-size: 18px;
+        margin: 8px;
+      }
+      &-subtitle {
+        margin: 8px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .img-food {
+      height: 175px;
+      width: 100%;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      border: 5px;
+    }
+  }
+}
+
+.card-resto {
+  background-color: white;
+  border-radius: 20px;
+  filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+
+  img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &-title {
+    font-size: 16px;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+}
+
+label {
+  .fa-solid {
+    display: none;
+    position: absolute;
+  }
+}
+
+label:hover {
+  .fa-solid {
+    display: block;
+    opacity: 1;
+    background-image: linear-gradient(#9356dc, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  width: 80px;
+  height: 29px;
+  background-color: #99e2d0;
+  color: #008766;
+  border-radius: 3px;
+  position: absolute;
+  right: 3%;
+}
+
+/********* media queries *********/
+
+/******* Restaurants *******/
+.restaurants {
+  padding: 1%;
+  padding-bottom: 60px;
+  &-title {
+    padding-left: 8%;
+    padding-bottom: 3%;
+  }
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10%;
+    align-content: center;
+    margin-left: 10%;
+
+    .card-resto {
+      height: 251px;
+      width: 75%;
+    }
+  }
+}
