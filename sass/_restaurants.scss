@@ -101,24 +101,26 @@ label:hover {
 
 /********* media queries *********/
 
-/******* Restaurants *******/
-.restaurants {
-  padding: 1%;
-  padding-bottom: 60px;
-  &-title {
-    padding-left: 8%;
-    padding-bottom: 3%;
-  }
-  &-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 10%;
-    align-content: center;
-    margin-left: 10%;
+@media (min-width: 768px) {
+  /******* Restaurants *******/
+  .restaurants {
+    padding: 1%;
+    padding-bottom: 60px;
+    &-title {
+      padding-left: 8%;
+      padding-bottom: 3%;
+    }
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 10%;
+      align-content: center;
+      margin-left: 10%;
 
-    .card-resto {
-      height: 251px;
-      width: 75%;
+      .card-resto {
+        height: 251px;
+        width: 75%;
+      }
     }
   }
 }

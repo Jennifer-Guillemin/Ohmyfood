@@ -70,6 +70,7 @@ header div {
   justify-content: center;
   background-color: rgb(234, 234, 234);
   font-weight: 500;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 .search .fa-solid {
   margin-right: 15px;
@@ -145,7 +146,7 @@ header div {
   font-weight: 500;
 }
 .fonctionnement-txt .fa-solid {
-  margin-right: 10px;
+  margin-right: 15px;
 }
 
 li {
@@ -204,6 +205,9 @@ footer img {
 
 /********* media queries *********/
 @media (min-width: 768px) {
+  .search {
+    box-shadow: unset;
+  }
   .head-line {
     padding-bottom: 30px;
   }
@@ -331,31 +335,45 @@ label:hover .fa-solid {
 }
 
 /********* media queries *********/
-/******* Restaurants *******/
-.restaurants {
-  padding: 1%;
-  padding-bottom: 60px;
+@media (min-width: 768px) {
+  /******* Restaurants *******/
+  .restaurants {
+    padding: 1%;
+    padding-bottom: 60px;
+  }
+  .restaurants-title {
+    padding-left: 8%;
+    padding-bottom: 3%;
+  }
+  .restaurants-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10%;
+    align-content: center;
+    margin-left: 10%;
+  }
+  .restaurants-cards .card-resto {
+    height: 251px;
+    width: 75%;
+  }
 }
-.restaurants-title {
-  padding-left: 8%;
-  padding-bottom: 3%;
-}
-.restaurants-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 10%;
-  align-content: center;
-  margin-left: 10%;
-}
-.restaurants-cards .card-resto {
-  height: 251px;
-  width: 75%;
-}
-
 /*********** Les menus ***********/
 .entete img {
   width: 100%;
   height: 275px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+}
+h1 .fa-solid,
+h1 .fa-regular {
+  margin-right: unset;
+  margin-left: 10px;
 }
 
 .menu {
@@ -369,8 +387,8 @@ label:hover .fa-solid {
   width: 100%;
   position: relative;
   background-color: #f6f6f6;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   margin-top: -40px;
   padding-top: 8px;
 }
@@ -399,18 +417,6 @@ label:hover .fa-solid {
     transform: none;
   }
 }
-h1 {
-  display: flex;
-  justify-content: space-around;
-  font-family: "shrikhand";
-  font-weight: 400;
-  font-size: 28px;
-}
-h1 .fa-solid,
-h1 .fa-regular {
-  margin-right: unset;
-}
-
 .all-card {
   display: flex;
   flex-direction: column;
@@ -475,25 +481,19 @@ h1 .fa-regular {
   margin-right: -60px;
 }
 .button-check .fa-solid {
+  display: flex;
+  justify-content: end;
   color: white;
 }
 
 .card:hover .button-check {
-  animation: check 500ms forwards;
+  margin-right: 0px;
 }
 
-.button-check:hover {
-  display: flex;
+.card .button-check {
+  transition: margin-right 300ms;
 }
 
-@keyframes check {
-  from {
-    margin-right: -40px;
-  }
-  to {
-    margin-right: 0px;
-  }
-}
 .bouton-du-bas {
   display: flex;
   justify-content: center;
@@ -532,40 +532,30 @@ h1 .fa-regular {
 }
 
 /********* media queries *********/
-/******* Les menus ******/
-.entete img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 383px;
-}
-
-.card:hover .button-check {
-  animation: check 500ms forwards;
-}
-
-.button-check:hover {
-  display: flex;
-}
-
-@keyframes check {
-  from {
-    margin-right: -40px;
+@media (min-width: 768px) {
+  /******* Les menus ******/
+  .entete img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 383px;
   }
-  to {
+  .card:hover .button-check {
     margin-right: 0px;
   }
-}
-.menu-cards {
-  width: 78%;
-  margin-left: 11%;
-}
-.menu-cards section {
-  padding-left: 18%;
-  padding-right: 18%;
-}
-.menu-cards h1 {
-  display: flex;
-  justify-content: center;
-  padding-top: 15px;
-  gap: 2%;
+  .card .button-check {
+    transition: margin-right 1s;
+  }
+  .menu-cards {
+    width: 78%;
+    margin-left: 11%;
+  }
+  .menu-cards section {
+    padding-left: 18%;
+    padding-right: 18%;
+  }
+  .menu-cards h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -4,6 +4,19 @@
   height: 275px;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "shrikhand";
+  font-weight: 400;
+  font-size: 28px;
+  .fa-solid,
+  .fa-regular {
+    margin-right: unset;
+    margin-left: 10px;
+  }
+}
+
 .menu {
   border-bottom: solid 3px #99e2d0;
   width: 40px;
@@ -15,8 +28,8 @@
     width: 100%;
     position: relative;
     background-color: #f6f6f6;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     margin-top: -40px;
     padding-top: 8px;
   }
@@ -44,18 +57,6 @@
   100% {
     opacity: 1;
     transform: none;
-  }
-}
-
-h1 {
-  display: flex;
-  justify-content: space-around;
-  font-family: "shrikhand";
-  font-weight: 400;
-  font-size: 28px;
-  .fa-solid,
-  .fa-regular {
-    margin-right: unset;
   }
 }
 
@@ -126,26 +127,21 @@ h1 {
   border: 0;
   margin-right: -60px;
   .fa-solid {
+    display: flex;
+    justify-content: end;
     color: white;
   }
 }
 
 .card:hover {
   .button-check {
-    animation: check 500ms forwards;
-  }
-}
-
-.button-check:hover {
-  display: flex;
-}
-
-@keyframes check {
-  from {
-    margin-right: -40px;
-  }
-  to {
     margin-right: 0px;
+  }
+}
+
+.card {
+  .button-check {
+    transition: margin-right 300ms;
   }
 }
 
@@ -188,45 +184,39 @@ h1 {
 
 /********* media queries *********/
 
-/******* Les menus ******/
+@media (min-width: 768px) {
+  /******* Les menus ******/
 
-.entete img {
-  object-fit: cover;
-  height: 383px;
-}
-
-.card:hover {
-  .button-check {
-    animation: check 500ms forwards;
-  }
-}
-
-.button-check:hover {
-  display: flex;
-}
-
-@keyframes check {
-  from {
-    margin-right: -40px;
-  }
-  to {
-    margin-right: 0px;
-  }
-}
-
-.menu-cards {
-  width: 78%;
-  margin-left: 11%;
-
-  section {
-    padding-left: 18%;
-    padding-right: 18%;
+  .entete img {
+    object-fit: cover;
+    height: 383px;
   }
 
-  h1 {
-    display: flex;
-    justify-content: center;
-    padding-top: 15px;
-    gap: 2%;
+  .card:hover {
+    .button-check {
+      margin-right: 0px;
+    }
+  }
+
+  .card {
+    .button-check {
+      transition: margin-right 1s;
+    }
+  }
+
+  .menu-cards {
+    width: 78%;
+    margin-left: 11%;
+
+    section {
+      padding-left: 18%;
+      padding-right: 18%;
+    }
+
+    h1 {
+      display: flex;
+      justify-content: center;
+      padding-top: 15px;
+    }
   }
 }

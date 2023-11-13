@@ -58,6 +58,7 @@ header {
   display: flex;
   padding-top: 25px;
   padding-bottom: 15px;
+
   a {
     margin-left: 15px;
   }
@@ -75,6 +76,8 @@ header {
   justify-content: center;
   background-color: rgb(234, 234, 234);
   font-weight: 500;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
   .fa-solid {
     margin-right: 15px;
   }
@@ -151,7 +154,7 @@ header {
     margin-top: 10px;
     font-weight: 500;
     .fa-solid {
-      margin-right: 10px;
+      margin-right: 15px;
     }
   }
 }
@@ -216,6 +219,10 @@ footer {
 /********* media queries *********/
 
 @media (min-width: 768px) {
+  .search {
+    box-shadow: unset;
+  }
+
   .head-line {
     padding-bottom: 30px;
 
