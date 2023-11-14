@@ -18,7 +18,7 @@ h1 {
 }
 
 .menu {
-  border-bottom: solid 3px #99e2d0;
+  border-bottom: solid 3px $green;
   width: 40px;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -121,7 +121,7 @@ h1 {
   justify-content: center;
   height: 70px;
   width: 59px;
-  background-color: #99e2d0;
+  background-color: $green;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border: 0;
@@ -158,7 +158,7 @@ h1 {
   align-items: center;
   height: 50px;
   width: 186px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient($pink, $purple);
   border-radius: 25px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
   border: 0;
@@ -166,7 +166,7 @@ h1 {
 }
 
 .button-commander:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
+  background: linear-gradient($pink 100%, $purple 100% / white 15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
   opacity: 0.8;
 }

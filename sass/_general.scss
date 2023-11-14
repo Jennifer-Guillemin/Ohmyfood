@@ -1,4 +1,7 @@
 /****** Géneral *******/
+$purple: #9356dc;
+$pink: #ff79da;
+$green: #99e2d0;
 
 * {
   font-family: "Roboto", sans-serif;
@@ -19,7 +22,7 @@
   align-items: center;
   width: 100%;
   min-height: 100vh;
-  background-color: #9356dc;
+  background-color: $purple;
   animation: loader 3s forwards;
 
   h2 {
@@ -52,6 +55,10 @@
   15% {
     color: white;
   }
+
+  35% {
+    color: gray;
+  }
 }
 
 header {
@@ -74,9 +81,22 @@ header {
 .search {
   display: flex;
   justify-content: center;
-  background-color: rgb(234, 234, 234);
-  font-weight: 500;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 50px;
   box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+  input {
+    border-style: none;
+    background-color: #eaeaea;
+    font-weight: 500;
+    font-size: 16px;
+    width: 110px;
+  }
+
+  input::placeholder {
+    color: #000000;
+  }
 
   .fa-solid {
     margin-right: 15px;
@@ -101,7 +121,7 @@ header {
   align-items: center;
   height: 50px;
   width: 218px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient($pink, $purple);
   border-radius: 25px;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
   border: 0;
@@ -109,7 +129,7 @@ header {
 }
 
 .button-explorez:hover {
-  background: linear-gradient(#ff79da 100%, #9356dc 100% / #ffffff 15%);
+  background: linear-gradient($pink 100%, $purple 100% / white 15%);
   filter: drop-shadow(0px 4px 15px rgba(0, 0%, 0%, 0.35));
   opacity: 0.8;
 }
@@ -125,7 +145,7 @@ header {
   padding-top: 20px;
   &-title {
     margin-left: 5%;
-    margin-bottom: -30px;
+
     font-size: 24px;
     font-weight: 700;
   }
@@ -135,15 +155,15 @@ header {
     gap: 15px;
     padding-bottom: 40px;
     width: 85%;
-    margin-left: -5%;
+    margin: auto;
+    padding-left: unset;
 
     .card {
       background-color: #f6f6f6;
       border-radius: 20px;
-      box-shadow: 0px, 4px, 15px, 0px #000000;
+      box-shadow: 0px, 4px, 15px, 0px black;
       height: 72.38px;
       width: 100%;
-      margin-top: 15px;
     }
   }
 
@@ -151,7 +171,7 @@ header {
     display: flex;
     text-align: center;
     align-items: center;
-    margin-top: 10px;
+
     font-weight: 500;
     .fa-solid {
       margin-right: 15px;
@@ -161,26 +181,18 @@ header {
 
 li {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .fa-solid {
   color: rgb(53, 53, 53);
-  width: 12px;
-  height: 16px;
   border: 1px;
 }
 
-.fa-mobile-screen-button:hover {
-  color: #9356dc;
-}
-
-.fa-list-ul:hover {
-  color: #9356dc;
-}
-
+.fa-mobile-screen-button:hover,
+.fa-list-ul:hover,
 .fa-store:hover {
-  color: #9356dc;
+  color: $purple;
 }
 
 .numero {
@@ -190,13 +202,13 @@ li {
   height: 24px;
   width: 24px;
   border-radius: 20px;
-  background-color: #9356dc;
+  background-color: $purple;
   color: white;
 }
 
 /********** Footer *********/
 footer {
-  background-color: rgb(53, 53, 53);
+  background-color: #353535;
   color: white;
   padding: 15px;
 
@@ -245,7 +257,7 @@ footer {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 25px;
-      margin-left: 6%;
+      margin-right: 5%;
     }
 
     .card {

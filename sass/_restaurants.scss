@@ -70,7 +70,16 @@ input {
 label {
   .fa-solid {
     display: none;
-    position: absolute;
+    position: relative;
+  }
+  .fa-regular {
+    position: relative;
+  }
+}
+
+label:hover {
+  .fa-regular {
+    display: none;
   }
 }
 
@@ -78,10 +87,36 @@ label:hover {
   .fa-solid {
     display: block;
     opacity: 1;
-    background-image: linear-gradient(#9356dc, #ff79da);
+    background-image: linear-gradient($purple, $pink);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+}
+
+#heart:checked + label i.fa-solid,
+#heart1:checked + label i.fa-solid,
+#heart2:checked + label i.fa-solid,
+#heart3:checked + label i.fa-solid,
+#heart4:checked + label i.fa-solid,
+#heart5:checked + label i.fa-solid,
+#heart6:checked + label i.fa-solid,
+#heart7:checked + label i.fa-solid {
+  display: block;
+  opacity: 1;
+  background-image: linear-gradient($purple, $pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#heart:checked + label i.fa-regular,
+#heart1:checked + label i.fa-regular,
+#heart2:checked + label i.fa-regular,
+#heart3:checked + label i.fa-regular,
+#heart4:checked + label i.fa-regular,
+#heart5:checked + label i.fa-regular,
+#heart6:checked + label i.fa-regular,
+#heart7:checked + label i.fa-regular {
+  display: none;
 }
 
 .new {
@@ -92,7 +127,7 @@ label:hover {
   font-weight: 500;
   width: 80px;
   height: 29px;
-  background-color: #99e2d0;
+  background-color: $green;
   color: #008766;
   border-radius: 3px;
   position: absolute;
