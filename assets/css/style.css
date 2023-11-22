@@ -250,6 +250,7 @@ footer img {
   }
   .footer-content {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
   }
 }
@@ -597,6 +598,7 @@ h1 .fa-regular {
   .menu-cards h1 {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
